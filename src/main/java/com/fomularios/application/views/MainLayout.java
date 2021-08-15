@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+import com.fomularios.application.views.atividade.AtividadeView;
+import com.fomularios.application.views.testesForms.TestesFormsView;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.ComponentUtil;
 import com.vaadin.flow.component.Text;
@@ -19,9 +21,7 @@ import com.vaadin.flow.component.tabs.Tab;
 import com.vaadin.flow.component.tabs.Tabs;
 import com.vaadin.flow.component.tabs.TabsVariant;
 import com.vaadin.flow.router.RouterLink;
-import com.vaadin.flow.router.Route;
 import com.vaadin.flow.router.PageTitle;
-import com.fomularios.application.views.MainLayout;
 import com.fomularios.application.views.helloworld.HelloWorldView;
 import com.fomularios.application.views.about.AboutView;
 import com.vaadin.flow.server.PWA;
@@ -121,6 +121,10 @@ public class MainLayout extends AppLayout {
     private List<Tab> createMenuItems() {
         MenuItemInfo[] menuItems = new MenuItemInfo[]{ //
                 new MenuItemInfo("Hello World", "la la-globe", HelloWorldView.class), //
+
+                new MenuItemInfo("Testes Formulários", "la la-chain-broken", TestesFormsView.class), //
+
+                new MenuItemInfo("Atividade", "la la-edit", AtividadeView.class), //
 
                 new MenuItemInfo("About", "la la-file", AboutView.class), //
 
