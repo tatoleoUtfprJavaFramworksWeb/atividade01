@@ -1,9 +1,16 @@
 package com.fomularios.application.entity;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Disciplina {
+public class Disciplina implements Serializable {
+
+    private static final long serialVersionUID = 8100204744616327559L;
 
     private Integer id;
     private String nome;
@@ -16,6 +23,9 @@ public class Disciplina {
         this.nome = nome;
     }
 
+    public Disciplina(String nome) {
+        this.nome = nome;
+    }
     public Integer getId() {
         return id;
     }

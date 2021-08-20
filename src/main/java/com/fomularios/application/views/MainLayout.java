@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Optional;
 
 import com.fomularios.application.views.atividade.AtividadeView;
+import com.fomularios.application.views.crud.CrudView;
 import com.fomularios.application.views.testesForms.TestesFormsView;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.ComponentUtil;
@@ -125,6 +126,8 @@ public class MainLayout extends AppLayout {
                 new MenuItemInfo("Testes Formulários", "la la-chain-broken", TestesFormsView.class), //
 
                 new MenuItemInfo("Atividade", "la la-edit", AtividadeView.class), //
+
+                new MenuItemInfo("Atividade CRUD", "la la-edit", CrudView.class), //
 
                 new MenuItemInfo("About", "la la-file", AboutView.class), //
 

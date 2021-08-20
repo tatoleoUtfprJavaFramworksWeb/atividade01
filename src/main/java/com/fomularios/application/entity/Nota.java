@@ -1,12 +1,17 @@
 package com.fomularios.application.entity;
 
+import javax.persistence.*;
 import java.io.Serializable;
 import java.math.BigDecimal;
 
+@Entity
 public class Nota implements Serializable {
 
     private static final long serialVersionUID = 3815873784709209943L;
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer id;
     private Integer anoLetivo;
     private String bimestre;
     private Disciplina disciplina;
@@ -16,6 +21,28 @@ public class Nota implements Serializable {
     private Boolean rascunho;
 
     public Nota() {
+    }
+
+    public Nota(Integer anoLetivo, String bimestre, Disciplina disciplina, String professor, String atividade, BigDecimal nota, Boolean rascunho) {
+        this.anoLetivo = anoLetivo;
+        this.bimestre = bimestre;
+        this.disciplina = disciplina;
+        this.professor = professor;
+        this.atividade = atividade;
+        this.nota = nota;
+        this.rascunho = rascunho;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public boolean isPersisted() {
+        return id != null;
     }
 
     public Integer getAnoLetivo() {
